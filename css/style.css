@@ -1,3 +1,42 @@
-.games {
-    height: 500px;
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container { 
+    padding-top: 50px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.arrow-l {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;    
+    font-size: 30px; 
+    cursor: pointer;   
+}
+
+.arrow-r {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;   
+    font-size: 30px; 
+    cursor: pointer;  
 }
