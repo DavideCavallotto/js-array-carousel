@@ -10,4 +10,23 @@ const carousel = [
     "./img/05.webp"
 ]
 
-console.log(carousel)
+// - recupero dal DOM la classe 'carousel-container'
+const carouselDOMElement = document.querySelector('.carousel-container')
+console.log(carouselDOMElement)
+// - creo un ciclo for per le immagini dell'Array
+for (let i = 0; i < carousel.length; i++) {
+    const currentSrc = carousel[i]
+    console.log(i, currentSrc)
+
+    const htmlString = `
+    <div class="image">
+        <img src="${currentSrc}">
+    </div>
+    `
+    console.log(htmlString)
+    carouselDOMElement.innerHTML += htmlString
+}
+
+// - recupero la lista di nodi dal DOM
+const imageDOMElements = document.getElementsByClassName('image')
+console.log(imageDOMElements)
