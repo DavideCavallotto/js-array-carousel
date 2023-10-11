@@ -61,13 +61,13 @@ const upButtonDOMElement = document.getElementById('up-button');
 upButtonDOMElement.addEventListener ('click',function () {  
     imageDOMElements[indexCurrentImage].classList.remove('active');          
     indexCurrentImage--;
-      
+    
     if (indexCurrentImage >= imageLength) {
         indexCurrentImage = 0;                
     }
-
-    imageDOMElements[indexCurrentImage].classList.add('active');
     
+    imageDOMElements[indexCurrentImage].classList.add('active');
+    console.log(imageDOMElements, 'imageDOMElements')
 
     console.log(indexCurrentImage);    
 
