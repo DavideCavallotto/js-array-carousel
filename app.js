@@ -13,20 +13,48 @@ const carousel = [
 // - recupero dal DOM la classe 'carousel-container'
 const carouselDOMElement = document.querySelector('.carousel-container')
 console.log(carouselDOMElement)
-// - creo un ciclo for per le immagini dell'Array
+// - creo un ciclo for per aggiungere le immagini dell'Array all'html
 for (let i = 0; i < carousel.length; i++) {
-    const currentSrc = carousel[i]
-    console.log(i, currentSrc)
+    const currentSrc = carousel[i];    
 
     const htmlString = `
     <div class="image">
         <img src="${currentSrc}">
     </div>
     `
-    console.log(htmlString)
-    carouselDOMElement.innerHTML += htmlString
+    console.log(htmlString);
+    carouselDOMElement.innerHTML += htmlString;
 }
 
 // - recupero la lista di nodi dal DOM
-const imageDOMElements = document.getElementsByClassName('image')
-console.log(imageDOMElements)
+let imageDOMElements = document.getElementsByClassName('image');
+console.log('imageDOMElements', imageDOMElements);
+// - do al primo elemento la classe active
+let activeSrc = imageDOMElements[0];
+activeSrc.classList.add('active');
+
+// - recupero il bottone dal DOM
+const downButtonDOMElement = document.getElementById('down-button');
+
+let indexCurrentImage = 0;
+let imageLength = imageDOMElements.length;
+
+
+downButtonDOMElement.addEventListener ('click',function () {  
+    imageDOMElements[indexCurrentImage].classList.remove('active');          
+    indexCurrentImage++;
+      
+    if (indexCurrentImage >= imageLength) {
+        indexCurrentImage = 0;                
+    }
+
+    imageDOMElements[indexCurrentImage].classList.add('active');
+    
+
+    console.log(indexCurrentImage);    
+
+
+})
+
+
+
