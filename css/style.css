@@ -3,20 +3,26 @@ img {
     display: block;
 }
 
-.container { 
-    padding-top: 50px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.carousel-container {
-    position: relative;
-    background-color: black;
-    height: 614.38px;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
+.container {     
+    max-width: 700px;
+    margin: 0 auto;      
+}
+
+.carousel-container {
+    height: 100%;
+    position: relative;
+    background-color: black;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow-up {
@@ -54,3 +60,25 @@ img {
 .carousel-container .active {
     display: block;
 }
+
+.thumbnails-container {    
+    max-width: 200px;  
+    display: flex;
+    flex-direction: column;
+    position: relative;      
+}
+
+.thumbnails-container img {
+    background-color: black;
+    object-fit: contain;
+    opacity: 0.5;
+}
+
+.focus {
+    opacity: 1;
+}
+
+.section {
+    display: flex;
+}
+

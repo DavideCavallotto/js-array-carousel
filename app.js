@@ -62,8 +62,8 @@ upButtonDOMElement.addEventListener ('click',function () {
     imageDOMElements[indexCurrentImage].classList.remove('active');          
     indexCurrentImage--;
     
-    if (indexCurrentImage >= imageLength) {
-        indexCurrentImage = 0;                
+    if (indexCurrentImage < 0) {
+        indexCurrentImage = imageLength - 1;                
     }
     
     imageDOMElements[indexCurrentImage].classList.add('active');
@@ -73,6 +73,8 @@ upButtonDOMElement.addEventListener ('click',function () {
 
 
 })
+
+
 
 
 
